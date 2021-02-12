@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+.wrapper{
+    background-color: #fff;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top:  5px solid crimson;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+.wrapper h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+.input-name{
+    width: 90%;
+    position: relative;
+    margin: 20px auto;
+}
+.lock{
+    padding: 8px 11px;
+}
+.name{
+    width: 45%;
+    padding: 8px 0 8px 40px;
+}
+.input-name span{
+    margin-left: 35px;
+}
+.text-name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.input-name i{
+    position: absolute;
+    font-size: 18px;
+    border-right: 1px solid #cccccc;
+}
+.email{
+    padding: 8px;
+}
+.text-name, .name{
+    border: 1px solid #cccccc;
+    outline: none;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+.text-name:hover, .name:hover{
+    background-color: #fafafa;
+}
+.text-name:focus, .name:focus{
+    -webkit-box-shadow: 0 0 2px 1px rgba(230, 6, 6, 0.5);
+    -moz-box-shadow:0 0 2px 1px rgba(230, 6, 6, 0.5);
+    box-shadow: 0 0 2px 1px rgba(230, 6, 6, 0.5);
+    border: 1px solid crimson;
+    background: #fafafa;
+}
+.radio-button{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.gender{
+    margin-right: 16px;
+}
+.gender::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    border-radius: 100%;
+    vertical-align: -3px;
+    border: 2px solid #cccccc;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.radio-button:hover + .gender::before{
+    border-color: #000000;
+}
+.radio-button:checked + .gender::before{
+    background-color: #000000;
+    border-color: #000000;
+}
+.country{
+    display: inline-block;
+    width: 100%;
+    height: 35px;
+    padding: 0px 15px;
+    cursor: pointer;
+    color: #7b7b7b;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.2s ease;
+}
+.country::-ms-expand{
+    display: none;
+}
+.country:hover, .country:focus{
+    color: #000000;
+    background: #fafafa;
+    border-color: #000000;
+    outline: none;
+}
+.arrow{
+    position: absolute;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    border-width: 8px 5px 0 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+}
+.country:hover + .arrow, .country:focus + .arrow{
+    border-top-color: #000000;
+}
+.chack{
+    margin-right: 16px;
+    position: relative;
+}
+.chack::before{
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding: 2.5px;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.chack::after{
+    border-right: 2px solid #000000;
+    border-top: 2px solid #000000;
+    content: '';
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 7px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin: left top;
+    width: 7px;
+    display: none;
+}
+.chack-button{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.chack-button:hover +.chack::before{
+    border-color: #000000;
+}
+.chack-button:checked +.chack::before{
+    border-color: #000000;
+}
+.chack-button:checked +.chack::after{
+    -moz-animation: check 0.8s ease 0s running;
+    -webkit-animation: check 0.8s ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: #000000;
+}
+.button{
+    background-color: crimson;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.button:hover{
+    background-color: #cccccc;
+    color: crimson;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: auto;
+    padding-bottom: auto;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 50px;
+    border-bottom: 5px solid #000000;
+    line-height: 50px;
+    background: #fff;
+    overflow: hidden;
+}
+.container span{
+    color: #fff;
+    font-size: 30px;
+    background: #000;
+    display: inline-block;
+    padding: 2px 20px;
+    text-transform: uppercase;
+}
+.container span:before{
+    position: absolute;
+    content: '';
+    width: 65%;
+    height: 100%;
+    background: #000000;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+.iframe-container{
+    position: absolute;
+    align-items: center;
+    left: 25%;
+    width: 100%;
+    padding-bottom: 60%;
+    height: 0;
+}
+.iframe-container iframe{
+    position: absolute;
+    top: 35px;
+    width: 500px;
+    height: 50%;
+}
+.iframe-container video{
+    position: absolute;
+    top: 350px;
+    left: 500px;
+}
